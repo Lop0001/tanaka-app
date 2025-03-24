@@ -13,8 +13,8 @@
        <a th:href="@{/nuevo}" class="btn btn-primary">Agregar Producto</a>
        
        <!-- Formulario de busqueda -->
-       <form th:action="@{/}" method="get" style=margin-bottom:29px;>
-             <label for="nombre">Buscar Nombre</label>
+       <form th:action="@{/}" method="get" style=margin-bottom:20px;>
+             <label for="nombre">Buscar por Nombre</label>
              <input type="text" id="name" th:value="${nombreBuscado}" placeholder="Escribe tu nombre">
              <button type="submit">Buscar</button>
              <a th:href="@{/}" style="margin-left:10px;" >Limpiar Busqueda</a>
@@ -26,8 +26,9 @@
              <p>No se encontraron productos</p>
        </div>
 
+
        <!-- tabla para mostrar los productos -->
-       
+       <div th:unless="${#lists.isEmpty(datos)}">
        <table class="table">
                <thead>
                        <tr>
@@ -59,6 +60,6 @@
                        </tr>
                </tbody>
        </table>
-
+ </div>
 </body>
 </html>

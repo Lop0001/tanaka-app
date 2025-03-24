@@ -17,7 +17,7 @@ public class ProductController {
 
 	private final ProductService productService;
 	
-	@GetMapping("/productos")
+	@GetMapping("/")
 	public String findAllOrFilterByName(@RequestParam(required=false) String name,  Model model){
 		List<Product> products = productService.findAllOrFilterByName(name);
 		model.addAttribute("datos", products);

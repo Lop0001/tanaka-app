@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 
 
 @Entity(name="Product")
-@Table(name="tbl_product")
+@Table(name="tbl_products")
 @Getter
 @Setter
 @AllArgsConstructor
