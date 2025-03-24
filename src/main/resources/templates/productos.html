@@ -53,7 +53,7 @@
                                  <img th:src="${producto.image}" alt="imagen del producto" style="max-width:100px;">
                             </td>
                             <td>
-                               <a th:href="@{/{id}{id=${producto.id}}}">Ver Detalle</a>
+                               <a th:href="@{/{id}(id=${producto.id})}">Ver Detalle</a>
                                <a th:href="@{/editar/{id}{id=${producto.id}}}">Editar</a>
                                <a th:href="@{/eliminar/{id}{id=${producto.id}}}">Borrar</a>
                             </td>
